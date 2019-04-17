@@ -16,7 +16,7 @@
 			"flags": {
 				"LDFLAGS": ""
 			},
-			"objects": "r3dVoxel/%"
+			"objects": "peggy/%"
 		}
 	}
 }
