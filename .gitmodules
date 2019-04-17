@@ -1,0 +1,5 @@
+[submodule "über.mk"]
+	url = https://github.com/bit2shift/uber.mk
+	branch = avelã
+	path = über.mk
+	ignore = all

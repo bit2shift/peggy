@@ -1,0 +1,22 @@
+{
+	"flags": {
+		"common": {
+			"CXXFLAGS": "-std=c++17 -pedantic -Wall -Wconversion -Werror -Wextra -fPIC -fvisibility=hidden",
+			"CPPFLAGS": "-I$(CURDIR)/inc"
+		},
+		"debug": {
+			"CXXFLAGS": "-O0 -g3"
+		},
+		"release": {
+			"CXXFLAGS": "-O3"
+		}
+	},
+	"targets": {
+		"peggy/peggy.a": {
+			"flags": {
+				"LDFLAGS": ""
+			},
+			"objects": "r3dVoxel/%"
+		}
+	}
+}
