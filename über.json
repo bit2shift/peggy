@@ -13,6 +13,7 @@
 	},
 	"targets": {
 		"peggy/peggy.a": {
+			"static": true,
 			"flags": {
 			},
 			"objects": "peggy/%"
