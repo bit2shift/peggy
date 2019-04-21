@@ -16,7 +16,10 @@
 			"static": true,
 			"flags": {
 			},
-			"objects": "peggy/%"
+			"objects": [
+				"$(eval ARFLAGS:=src)",
+				"peggy/%"
+			]
 		}
 	}
 }
