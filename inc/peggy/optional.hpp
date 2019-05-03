@@ -10,8 +10,8 @@ namespace peggy
 	template<typename... rules>
 	struct optional : detail::packrat<optional<rules...>>
 	{
-		template<template<typename> typename action, typename... S>
-		static bool do_match(std::istream& input, S&&... state) noexcept
+		template<template<typename> typename action, typename char_type, typename... S>
+		static bool do_match(std::basic_istream<char_type>& input, S&&... state) noexcept
 		{
 			sequence<rules...>::template do_match<action>(input, state...);
 			return true;

@@ -18,8 +18,8 @@ namespace peggy::detail
 	template<typename R>
 	struct packrat
 	{
-		template<typename rule, template<typename> typename action, typename... S>
-		static bool match(std::istream& input, S&&... state) noexcept
+		template<typename rule, template<typename> typename action, typename char_type, typename... S>
+		static bool match(std::basic_istream<char_type>& input, S&&... state) noexcept
 		{
 			static_assert(std::is_base_of_v<R, rule>, "<rule> isn't derived from <R>");
 
