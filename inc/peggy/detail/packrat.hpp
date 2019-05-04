@@ -6,14 +6,14 @@
 
 namespace peggy::detail
 {
-	template<typename... S>
-	using apply_t = void(std::istream&, std::streamoff, std::streamoff, S&&...) noexcept;
+	template<typename char_type, typename... S>
+	using apply_t = void(std::basic_istream<char_type>&, std::streamoff, std::streamoff, S&&...) noexcept;
 
 	template<typename A>
 	using apply_op = decltype(A::apply);
 
-	template<typename A, typename... S>
-	constexpr bool action_has_apply = std::experimental::is_detected_exact_v<apply_t<S...>, apply_op, A>;
+	template<typename A, typename char_type, typename... S>
+	constexpr bool action_has_apply = std::experimental::is_detected_exact_v<apply_t<char_type, S...>, apply_op, A>;
 
 	template<typename R>
 	struct packrat
@@ -30,7 +30,7 @@ namespace peggy::detail
 			else if(R::template do_match<action>(input, state...))
 			{
 				begin = offset, end = input.tellg();
-				if constexpr(action_has_apply<action<rule>, S...>)
+				if constexpr(action_has_apply<action<rule>, char_type, S...>)
 					action<rule>::apply(input, begin, end, state...);
 			}
 			else
