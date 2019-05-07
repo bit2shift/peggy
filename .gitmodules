@@ -3,3 +3,8 @@
 	branch = bolota
 	path = dep/über.mk
 	ignore = all
+
+[submodule "Catch2"]
+	url = https://github.com/catchorg/Catch2
+	path = dep/Catch2
+	ignore = all

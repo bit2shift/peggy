@@ -2,7 +2,7 @@
 	"flags": {
 		"common": {
 			"CXXFLAGS": "-std=c++17 -pedantic -Wall -Wconversion -Werror -Wextra -fPIC -fvisibility=hidden",
-			"CPPFLAGS": "-I$(CURDIR)/inc"
+			"CPPFLAGS": "-I$(CURDIR)/inc -I$(CURDIR)/dep/Catch2/single_include"
 		},
 		"debug": {
 			"CXXFLAGS": "-O0 -g3"
