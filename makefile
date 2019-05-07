@@ -1,3 +1,3 @@
 .DEFAULT_GOAL = devall
 .DEFAULT:
-	@$(MAKE) -füber.mk/makefile $@
+	@$(MAKE) -fdep/über.mk/makefile $@
