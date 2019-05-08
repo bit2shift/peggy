@@ -20,6 +20,12 @@
 				"$(eval ARFLAGS:=src)",
 				"peggy/%"
 			]
+		},
+		"test/test_vmbuffer_base": {
+			"objects": [
+				"test/main.o",
+				"peggy/detail/vmbuffer_base%.o"
+			]
 		}
 	}
 }
