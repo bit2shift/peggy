@@ -4,7 +4,7 @@
 	path = dep/über.mk
 	ignore = all
 
-[submodule "Catch2"]
+[submodule "catch2"]
 	url = https://github.com/catchorg/Catch2
 	path = dep/Catch2
 	ignore = all

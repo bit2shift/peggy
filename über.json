@@ -2,7 +2,7 @@
 	"flags": {
 		"common": {
 			"CXXFLAGS": "-std=c++17 -pedantic -Wall -Wconversion -Werror -Wextra -fPIC -fvisibility=hidden",
-			"CPPFLAGS": "-I$(CURDIR)/inc -I$(CURDIR)/dep/Catch2/single_include"
+			"CPPFLAGS": "-I$(CURDIR)/inc"
 		},
 		"debug": {
 			"CXXFLAGS": "-O0 -g3"
@@ -25,6 +25,14 @@
 			"objects": [
 				"test/main.o",
 				"peggy/detail/vmbuffer_base%.o"
+			]
+		}
+	},
+	"dependencies": {
+		"catch2": {
+			"build": [
+				"cmake -G'Unix Makefiles' -DBUILD_TESTING=OFF -DCATCH_INSTALL_DOCS=OFF -DCATCH_INSTALL_HELPERS=OFF -DCMAKE_INSTALL_PREFIX=. .",
+				"make install"
 			]
 		}
 	}
