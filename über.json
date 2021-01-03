@@ -1,7 +1,7 @@
 {
 	"flags": {
 		"common": {
-			"CXXFLAGS": "-std=c++17 -pedantic -Wall -Wconversion -Werror -Wextra -fPIC -fvisibility=hidden",
+			"CXXFLAGS": "-std=c++20 -pedantic -Wall -Wconversion -Werror -Wextra -fPIC -fvisibility=hidden",
 			"CPPFLAGS": "-I$(CURDIR)/inc"
 		},
 		"debug": {
